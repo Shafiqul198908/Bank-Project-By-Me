@@ -110,6 +110,9 @@
                 const currentBalance = document.getElementById("currentBalance").innerText;
                 const currentBalanceNumber = parseFloat(currentBalance);
                 const totalBalance = -1 * withdrawNumber + currentBalanceNumber;
+                if(totalBalance < 0){
+                    totalBalance = 0
+                };
                 document.getElementById("currentBalance").innerText = totalBalance;
 
                 document.getElementById("withdrawAmount").value = "";
